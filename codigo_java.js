@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const productosContainer = document.querySelector('.productos');
 
-    // Crear los elementos para cada producto
+    // Crear los elementos para cada prodducto
     productos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('producto');

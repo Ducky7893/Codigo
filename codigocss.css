@@ -254,6 +254,6 @@ form button:hover {
     }
     
     .productos {
-        grid-template-columns: 1fr; /* Cambia a 1 columna in movile*/
+        grid-template-columns: 1fr; /* Cambia a 1 columna in movile bla bla*/
     }
 }
