@@ -8,7 +8,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
+<<<<<<< HEAD
     line-height: 1.6;
+=======
+    padding: 20px;
+>>>>>>> 48f46fc285aac26a421d62db1addd82fe1a85bb8
 }
 
 header {
@@ -144,6 +148,7 @@ form button:hover {
     background-color: #2a3d4f;
 }
 
+<<<<<<< HEAD
 
 footer {
     background-color: #3c3a36;
@@ -303,3 +308,159 @@ nav ul li a:hover {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+=======
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Estilo para las imágenes de los productos */
+.productos .producto img {
+    width: 3px;  /* Ancho de la imagen */
+    height: 3px; /* Alto de la imagen */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste correctamente dentro del tamaño sin distorsionarse */
+}
+
+/* NUEVOS ESTILOS PARA GALERÍA DE PRODUCTOS CON MÚLTIPLES IMÁGENES */
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para las categorías */
+.categorias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.categoria-btn {
+    padding: 10px 15px;
+    margin: 0 10px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.categoria-btn:hover {
+    background-color: #ccc;
+}
+
+.categoria-btn.activo {
+    background-color: #3e4a5e; /* Usando tu color azul oscuro para mantener consistencia */
+    color: white;
+}
+
+/* Estilos para la galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilos para cada producto en la nueva galería */
+.galeria .producto {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: auto; /* Ajuste para asegurar que los productos tengan altura apropiada */
+}
+
+.galeria .producto:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para las imágenes del producto */
+.producto-imagenes {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.5s;
+}
+
+.producto-imagen:not(:first-child) {
+    opacity: 0;
+}
+
+/* Navegación de las imágenes */
+.navegacion-img {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.punto-nav {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.punto-nav.activo {
+    background-color: white;
+}
+
+/* Estilos para la información del producto */
+.producto-info {
+    padding: 15px;
+}
+
+.producto-titulo {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.producto-precio {
+    font-weight: bold;
+    color: #3e4a5e; /* Usando tu azul oscuro para consistencia */
+}
+
+/* Responsive para la galería */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .productos {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .categorias {
+        flex-wrap: wrap;
+    }
+    
+    .categoria-btn {
+        margin-bottom: 10px;
+    }
+    
+    .productos {
+        grid-template-columns: 1fr; /* Cambia a 1 columna in movile bla bla*/
+    }
+}
+>>>>>>> 48f46fc285aac26a421d62db1addd82fe1a85bb8

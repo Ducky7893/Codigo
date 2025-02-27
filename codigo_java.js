@@ -6,8 +6,27 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Amigurumi conejo", imagen: "https://i.pinimg.com/originals/4f/dd/c8/4fddc8709f7b7061bb82fbe84784ff93.jpg", precio: "$40.000" },
     ];
 
+       // Galeria de productos
+
+    const galeriaProductos = {
+        productos: [],
+        crearProductoHTML: function() {},
+        // Resto de funciones
+        inicializar: function() {
+          this.cargarProductos();
+          this.configurarCategorias();
+        }
+      };
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        galeriaProductos.inicializar();
+      });
+
+
+
     const productosContainer = document.querySelector('.productos');
 
+<<<<<<< HEAD
     // Función para mostrar productos
     function mostrarProductos() {
         productosContainer.innerHTML = ""; // Limpiar antes de actualizar
@@ -44,5 +63,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Limpiar formulario
         formAgregarProducto.reset();
+=======
+    // Crear los elementos para cada prodducto
+    productos.forEach(producto => {
+        const div = document.createElement('div');
+        div.classList.add('producto');
+        div.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <h3>${producto.nombre}</h3>
+            <p>Precio: ${producto.precio}</p>
+        `;
+        productosContainer.appendChild(div);
     });
+
+    // Formulario de contacto
+    const formulario = document.getElementById('formContacto');
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el envío del formulario
+        alert('Mensaje enviado correctamente.');
+        formulario.reset();
+        
+
+>>>>>>> 48f46fc285aac26a421d62db1addd82fe1a85bb8
+    });
+    
 });
