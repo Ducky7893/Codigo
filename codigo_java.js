@@ -6,6 +6,24 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Amigurumi conejo", imagen: "https://i.pinimg.com/originals/4f/dd/c8/4fddc8709f7b7061bb82fbe84784ff93.jpg", precio: "$40.000" },
     ];
 
+       // Galeria de productos
+
+    const galeriaProductos = {
+        productos: [],
+        crearProductoHTML: function() {},
+        // Resto de funciones
+        inicializar: function() {
+          this.cargarProductos();
+          this.configurarCategorias();
+        }
+      };
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        galeriaProductos.inicializar();
+      });
+
+
+
     const productosContainer = document.querySelector('.productos');
 
     // Crear los elementos para cada prodducto
@@ -26,5 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault(); // Prevenir el envío del formulario
         alert('Mensaje enviado correctamente.');
         formulario.reset();
+        
+
     });
+    
 });

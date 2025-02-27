@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    #Comentario
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo de Productos</title>
     <link rel="stylesheet" href="codigocss.css">
 </head>
 <body>
     <section id="catalogo">
         <h2>Catálogo</h2>
-        <div class="productos">
-            <!-- Aquí se cargarán loss productos -->
-
-
-
-            
+        
+        <!-- Filtros por categoría -->
+        <div class="categorias">
+            <button class="categoria-btn activo" data-categoria="todos">Todos</button>
+            <button class="categoria-btn" data-categoria="electronica">Electrónica</button>
+            <button class="categoria-btn" data-categoria="ropa">Ropa</button>
+            <button class="categoria-btn" data-categoria="hogar">Hogar</button>
+        </div>
+        
+        <!-- Galería de productos -->
+        <div class="galeria" id="galeria-productos">
+            <!-- Los productos se cargarán dinámicamente con JavaScript -->
         </div>
     </section>
+
+    <!-- Script para la funcionalidad de la galería -->
+    <script src="codigo_java.js"></script>
 </body>
 </html>
