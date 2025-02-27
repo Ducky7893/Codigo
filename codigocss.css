@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #3c3a36; /* Color marrón oscuro */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 25px;
+    margin: 20px 0;
+}
+
+#inicio {
+    background-color: #d9b89c; /* Color marrón claro */
+    text-align: center;
+}
+
+#empresa {
+    background-color: #c39a6b; /* Color marrón intermedio */
+}
+
+#catalogo {
+    background-color: #3e4a5e; /* Azul oscuro */
+    color: #fff;
+}
+
+#contacto {
+    background-color: #b5c6d6; /* Azul claro */
+}
+
+footer {
+    text-align: center;
+    background-color: #3c3a36;
+    color: #fff;
+    padding: 10px 0;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #3e4a5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2a3d4f;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;}
+
+  /* ... (el código existente) ... */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Estilo para las imágenes de los productos */
+.productos .producto img {
+    width: 3px;  /* Ancho de la imagen */
+    height: 3px; /* Alto de la imagen */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste correctamente dentro del tamaño sin distorsionarse */
+}
