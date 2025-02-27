@@ -8,10 +8,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #3c3a36; /* Color marrón oscuro */
+    background-color: #3c3a36; /* Marrón oscuro */
     padding: 10px 0;
 }
 
@@ -38,25 +39,64 @@ nav ul li a:hover {
 
 section {
     padding: 25px;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 #inicio {
-    background-color: #d9b89c; /* Color marrón claro */
+    background-color: #d9b89c; /* Marrón claro */
     text-align: center;
 }
 
 #empresa {
-    background-color: #c39a6b; /* Color marrón intermedio */
+    background-color: #c39a6b; /* Marrón intermedio */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#catalogo {
-    background-color: #3e4a5e; /* Azul oscuro */
-    color: #fff;
+#empresa h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3c3a36;
 }
 
-#contacto {
-    background-color: #b5c6d6; /* Azul claro */
+#empresa h3 {
+    margin-top: 20px;
+    color: #3c3a36;
+    border-bottom: 2px solid #3c3a36;
+    padding-bottom: 5px;
+}
+
+#empresa ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+blockquote {
+    background-color: #fff;
+    border-left: 5px solid #3c3a36;
+    padding: 10px 15px;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.imagen-artesanos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imagen-artesanos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-artesanos p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
 }
 
 footer {
@@ -64,10 +104,12 @@ footer {
     background-color: #3c3a36;
     color: #fff;
     padding: 10px 0;
+    margin-top: 20px;
 }
 
 h1, h2 {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 form {
@@ -102,22 +144,162 @@ form button:hover {
     background-color: #2a3d4f;
 }
 
-.productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;}
 
-  /* ... (el código existente) ... */
-
-.productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+footer {
+    background-color: #3c3a36;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
 }
 
-/* Estilo para las imágenes de los productos */
-.productos .producto img {
-    width: 3px;  /* Ancho de la imagen */
-    height: 3px; /* Alto de la imagen */
-    object-fit: cover; /* Esto asegura que la imagen se ajuste correctamente dentro del tamaño sin distorsionarse */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px; /* Tamaño del icono */
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Efecto de agrandado al pasar el mouse */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3c3a36;
+    padding: 10px 20px;
+}
+
+.logo-container img {
+    width: 120px; /* Ajusta el tamaño según tu logo */
+    height: auto;
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Contenedor del catálogo */
+#catalogo {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título del catálogo */
+#catalogo h2 {
+    font-size: 28px;
+    color: #3c3a36;
+    margin-bottom: 20px;
+}
+
+/* Cuadrícula de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tarjeta de producto */
+.producto {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Imágenes de los productos */
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nombre del producto */
+.producto h3 {
+    font-size: 20px;
+    color: #3c3a36;
+    margin: 10px 0;
+}
+
+/* Descripción */
+.producto p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botón de "Ver más" */
+.producto .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3e4a5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+.producto .btn:hover {
+    background-color: #2a3d4f;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
